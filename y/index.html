@@ -20,12 +20,12 @@
     <![endif]-->
         <h1>ROZRVH SMI0114</h1>
         <span id="currentTime"></span>
-        <button type="submit" onclick="highlightClass('lecture','seminar')">Ukaž cvičeni</button>
-        <button type="submit" onclick="highlightClass('seminar','lecture')">Ukaž přednášky</button>
+        <button type="submit" onclick="highlightClass('seminar','lecture')">Ukaž cvičeni</button>
+        <button type="submit" onclick="highlightClass('lecture','seminar')">Ukaž přednášky</button>
         <button type="submit" onclick="showAll()">Ukaž vše</button>
         <table class="schedule">
             <thead>
-                <th></th>
+                <th id="first"></th>
                 <th>7:15<br>8:00</th>
                 <th>8:00<br>8:45</th>
                 <th>9:00<br>9:45</th>
@@ -42,11 +42,11 @@
                 <th>18:30<br>19:15</th>
             </thead>
             <tbody>
-                <tr id="monday">
+                <tr id="1">
                     <th>Pondělí</th>
-                    <td id="mon1"></td>
-                    <td id="mon2"></td>
-                    <td id="mon3" class="lecture" colspan="2">
+                    <td></td>
+                    <td></td>
+                    <td class="lecture" colspan="2">
                         <p>
                             <span class="abbrev">VIA</span>
                             <p>M. Radecký</p>
@@ -86,97 +86,99 @@
                             </p>
                         </p>
                     </td>
-                    <td id="mon7"></td>
-                    <td id="mon8"></td>
-                    <td id="mon9"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
-                <tr id="tuesday">
+                <tr id="2">
                     <th>Úterý</th>
-                    <td id="tue1"></td>
-                    <td id="tue2"></td>
-                    <td id="tue3"></td>
-                    <td id="tue4"></td>
-                    <td id="tue5"></td>
-                    <td id="tue6"></td>
-                    <td id="tue7"></td>
-                    <td id="tue8"></td>
-                    <td id="tue9"></td>
-                    <td id="tue10" class="lecture" colspan="2">
+                    <td id="tue1 "></td>
+                    <td id="tue2 "></td>
+                    <td id="tue3 "></td>
+                    <td id="tue4 "></td>
+                    <td id="tue5 "></td>
+                    <td id="tue6 "></td>
+                    <td id="tue7 "></td>
+                    <td id="tue8 "></td>
+                    <td id="tue10 " class="lecture " colspan="2 ">
                         <p>
-                            <span class="abbrev">VIS</span>
+                            <span class="abbrev ">VIS</span>
                             <p>&nbsp;</p>
                             <p>
-                                <span class="left">&nbsp;</span>
-                                <span class="right">P/01</span>
+                                <span class="left ">&nbsp;</span>
+                                <span class="right ">P/01</span>
                             </p>
                         </p>
                     </td>
-                    <td id="tue11"></td>
-                    <td id="tue12"></td>
-                    <td id="tue13"></td>
+                    <td id="tue11 "></td>
+                    <td id="tue12 "></td>
+                    <td id="tue13 "></td>
+                    <td></td>
                 </tr>
-                <tr id="wednesday">
-                    <th>Středa</th>
-                    <td id="wed1" class="lecture" colspan="2">
+                <tr id="3">
+                    <th id="th_column">Středa</th>
+                    <td id="wed1 " class="lecture " colspan="2 ">
                         <p>
-                            <span class="abbrev">TDS II</span>
+                            <span class="abbrev ">TDS II</span>
                             <p>R. Fasuga</p>
                             <p>
-                                <span class="left">POREB330</span>
-                                <span class="right">P/01</span>
+                                <span class="left ">POREB330</span>
+                                <span class="right ">P/01</span>
                             </p>
                         </p>
                     </td>
-                    <td id="wed2" class="seminar" colspan="2">
+                    <td id="wed2 " class="seminar " colspan="2 ">
                         <p>
-                            <span class="abbrev">AT.NET</span>
+                            <span class="abbrev ">AT.NET</span>
                             <p>J. Janoušek</p>
                             <p>
-                                <span class="left">PORRV203</span>
-                                <span class="right">C/03</span>
+                                <span class="left ">PORRV203</span>
+                                <span class="right ">C/03</span>
                             </p>
                         </p>
                     </td>
-                    <td id="wed3"></td>
                     <td id="wed4"></td>
-                    <td id="wed5" class="lecture" colspan="2">
+                    <td></td>
+                    <td id="wed5" class="lecture " colspan="2 ">
                         <p>
-                            <span class="abbrev">AT.NET</span>
+                            <span class="abbrev ">AT.NET</span>
                             <p>J. Janoušek</p>
                             <p>
-                                <span class="left">POREC3</span>
-                                <span class="right">P/01</span>
+                                <span class="left ">POREC3</span>
+                                <span class="right ">P/01</span>
                             </p>
                         </p>
                     </td>
-                    <td id="wed6" class="seminar" colspan="2">
+                    <td id="wed6 " class="seminar " colspan="2 ">
                         <p>
-                            <span class="abbrev">VIS</span> <strong>Sudý</strong>
+                            <span class="abbrev ">VIS</span> <strong>Sudý</strong>
                             <p>&nbsp;</p>
                             <p>
-                                <span class="left">&nbsp;</span>
-                                <span class="right">P/01</span>
+                                <span class="left ">&nbsp;</span>
+                                <span class="right ">P/01</span>
                             </p>
                         </p>
                     </td>
-                    <td id="wed7"></td>
-                    <td id="wed8"></td>
-                    <td id="wed9"></td>
-                    <td id="wed10"></td>
+                    <td id="wed7 "></td>
+                    <td id="wed8 "></td>
+                    <td id="wed9 "></td>
+                    <td id="wed10 "></td>
                 </tr>
-                <tr id="thursday">
+                <tr id="4">
                     <th>Čtvrtek</th>
-                    <td id="thu1" colspan="14"></td>
+                    <td id="thu1 " colspan="14"></td>
                 </tr>
-                <tr id="friday">
+                <tr id="5">
                     <th>Pátek</th>
-                    <td id="fri1" colspan="14"></td>
+                    <td id="fri1 " colspan="14"></td>
                 </tr>
             </tbody>
         </table>
-        <div class="myMarker"></div>
-        <div class="myMarkerDot"></div>
-        <script src="script.js"></script>
+        <div id="timeIndicator" class="markerPosition">
+            <div class="myMarker "></div>
+            <div class="myMarkerDot "></div>
+        </div>
+        <script src="script.js "></script>
     </body>
 
 </html>

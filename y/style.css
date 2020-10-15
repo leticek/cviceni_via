@@ -49,3 +49,8 @@ div.myMarkerDot {
   border-radius: 50%;
   background-color: red;
 }
+div.markerPosition {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
