@@ -1,0 +1,20 @@
+table.schedule {
+  border-collapse: collapse;
+}
+table.schedule th {
+  background-color: lightgray;
+  color: black;
+  border: 2px solid black;
+}
+table.schedule td {
+  background-color: white;
+  border: 1px solid black;
+}
+table.schedule td.lecture {
+  border: 2px solid darkred;
+  background-color: #ffdddd;
+}
+table.schedule td.seminar {
+  border: 2px solid darkblue;
+  background-color: #ddddff;
+}

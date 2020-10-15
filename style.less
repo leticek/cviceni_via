@@ -1,0 +1,46 @@
+table.schedule {
+    border-collapse: collapse;
+
+    p {
+        font-size: 12px;
+        margin   : 0px 0px 0px 1px ;
+
+        .abbrev {
+            text-decoration-line: underline;
+        }
+
+        .left {
+            font-size: inherit;
+            width    : 105px;
+            float    : left;
+        }
+
+        .right {
+
+            float: right;
+        }
+    }
+
+
+
+    th {
+        background-color: lightgray;
+        color           : black;
+        border          : 2px solid black;
+    }
+
+    td {
+        background-color: white;
+        border          : 1px solid black;
+    }
+
+    td.lecture {
+        border          : 2px solid darkred;
+        background-color: #ffdddd;
+    }
+
+    td.seminar {
+        border          : 2px solid darkblue;
+        background-color: #ddddff;
+    }
+}
