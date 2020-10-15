@@ -12,7 +12,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
     </head>
 
     <body>
@@ -20,9 +19,9 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
         <h1>ROZRVH SMI0114</h1>
-        <div id="currentTime"></div>
-        <button type="submit" onclick="showSeminar()">Ukaž cvičeni</button>
-        <button type="submit" onclick="showLecture()">Ukaž přednášky</button>
+        <span id="currentTime"></span>
+        <button type="submit" onclick="highlightClass('lecture','seminar')">Ukaž cvičeni</button>
+        <button type="submit" onclick="highlightClass('seminar','lecture')">Ukaž přednášky</button>
         <button type="submit" onclick="showAll()">Ukaž vše</button>
         <table class="schedule">
             <thead>
@@ -43,7 +42,7 @@
                 <th>18:30<br>19:15</th>
             </thead>
             <tbody>
-                <tr>
+                <tr id="monday">
                     <th>Pondělí</th>
                     <td id="mon1"></td>
                     <td id="mon2"></td>
@@ -91,7 +90,7 @@
                     <td id="mon8"></td>
                     <td id="mon9"></td>
                 </tr>
-                <tr>
+                <tr id="tuesday">
                     <th>Úterý</th>
                     <td id="tue1"></td>
                     <td id="tue2"></td>
@@ -116,7 +115,7 @@
                     <td id="tue12"></td>
                     <td id="tue13"></td>
                 </tr>
-                <tr>
+                <tr id="wednesday">
                     <th>Středa</th>
                     <td id="wed1" class="lecture" colspan="2">
                         <p>
@@ -165,18 +164,19 @@
                     <td id="wed9"></td>
                     <td id="wed10"></td>
                 </tr>
-                <tr>
+                <tr id="thursday">
                     <th>Čtvrtek</th>
                     <td id="thu1" colspan="14"></td>
                 </tr>
-                <tr>
+                <tr id="friday">
                     <th>Pátek</th>
                     <td id="fri1" colspan="14"></td>
                 </tr>
             </tbody>
         </table>
-
-        <script src="" async defer></script>
+        <div class="myMarker"></div>
+        <div class="myMarkerDot"></div>
+        <script src="script.js"></script>
     </body>
 
 </html>
