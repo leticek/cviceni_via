@@ -1,3 +1,16 @@
+window.addEventListener("load", showTime());
+
+function showTime() {
+    setInterval(temp, 1000);
+}
+
+function temp() {
+    let currTime = new Date();
+
+    let time = currTime.toLocaleDateString("cs-CZ") + " " + currTime.toLocaleTimeString("cs-CZ");
+    document.getElementById("currentTime").innerText = time;
+}
+
 function showLecture() {
     let cells = document.getElementsByClassName("lecture");
     for (i = 0; i < cells.length; i++) {
