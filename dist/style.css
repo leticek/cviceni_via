@@ -1,5 +1,21 @@
 table.schedule {
+  margin-top: 15px;
   border-collapse: collapse;
+}
+table.schedule p {
+  font-size: 12px;
+  margin: 0px 0px 0px 1px;
+}
+table.schedule p .abbrev {
+  text-decoration-line: underline;
+}
+table.schedule p .left {
+  font-size: inherit;
+  width: 105px;
+  float: left;
+}
+table.schedule p .right {
+  float: right;
 }
 table.schedule th {
   background-color: lightgray;
@@ -13,8 +29,10 @@ table.schedule td {
 table.schedule td.lecture {
   border: 2px solid darkred;
   background-color: #ffdddd;
+  opacity: 0.5;
 }
 table.schedule td.seminar {
   border: 2px solid darkblue;
   background-color: #ddddff;
+  opacity: 0.5;
 }
