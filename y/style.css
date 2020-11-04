@@ -1,3 +1,8 @@
+dialog.myDialog {
+  top: 51%;
+  left: -43%;
+  position: absolute;
+}
 table.schedule {
   margin-top: 15px;
   border-collapse: collapse;
@@ -16,6 +21,9 @@ table.schedule p .left {
 }
 table.schedule p .right {
   float: right;
+}
+table.schedule p .space {
+  margin: 3%;
 }
 table.schedule th {
   background-color: lightgray;

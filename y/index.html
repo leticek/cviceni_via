@@ -18,6 +18,14 @@
         <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+        <dialog id="noteDialog" class="myDialog">
+            <form>
+                Poznámky <br>
+                <textarea rows="4" cols="30" id="noteText"></textarea><br>
+                <input type="button" value="Uložit" id="saveButton" onclick="saveNote()">
+            </form>
+            <div id="notes"></div>
+        </dialog>
         <h1>ROZRVH SMI0114</h1>
         <span id="currentTime"></span>
         <button type="submit" onclick="highlightClass('seminar','lecture')">Ukaž cvičeni</button>
@@ -48,7 +56,8 @@
                     <td></td>
                     <td class="lecture" colspan="2">
                         <p>
-                            <span class="abbrev">VIA</span>
+                            <span class="abbrev">VIA <img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('viaLecture')"/></span>
                             <p>M. Radecký</p>
                             <p>
                                 <span class="left">POREC2</span>
@@ -58,7 +67,8 @@
                     </td>
                     <td id="mon4" class="seminar" colspan="2">
                         <p>
-                            <span class="abbrev">VIA</span>
+                            <span class="abbrev">VIA<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('viaSeminar')"/></span>
                             <p>M. Radecký</p>
                             <p>
                                 <span class="left">PORRV203</span>
@@ -68,7 +78,8 @@
                     </td>
                     <td id="mon5" class="lecture" colspan="2">
                         <p>
-                            <span class="abbrev">POS</span>
+                            <span class="abbrev">POS<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('posLecture')"/></span>
                             <p>&nbsp;</p>
                             <p>
                                 <span class="left"></span>
@@ -78,7 +89,8 @@
                     </td>
                     <td id="mon6" class="seminar" colspan="3">
                         <p>
-                            <span class="abbrev">POS</span>
+                            <span class="abbrev">POS<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('posSeminar')"/></span>
                             <p>&nbsp;</p>
                             <p>
                                 <span class="left"></span>
@@ -100,9 +112,10 @@
                     <td id="tue6 "></td>
                     <td id="tue7 "></td>
                     <td id="tue8 "></td>
-                    <td id="tue10 " class="lecture " colspan="2 ">
+                    <td id="tue10 " class="lecture" colspan="2 ">
                         <p>
-                            <span class="abbrev ">VIS</span>
+                            <span class="abbrev ">VIS <img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('visLecture')"/></span>
                             <p>&nbsp;</p>
                             <p>
                                 <span class="left ">&nbsp;</span>
@@ -119,7 +132,8 @@
                     <th id="th_column">Středa</th>
                     <td id="wed1 " class="lecture " colspan="2 ">
                         <p>
-                            <span class="abbrev ">TDS II</span>
+                            <span class="abbrev ">TDS II<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('tdsLecture')"/></span>
                             <p>R. Fasuga</p>
                             <p>
                                 <span class="left ">POREB330</span>
@@ -129,7 +143,8 @@
                     </td>
                     <td id="wed2 " class="seminar " colspan="2 ">
                         <p>
-                            <span class="abbrev ">AT.NET</span>
+                            <span class="abbrev ">AT.NET<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('netSeminar')"/></span>
                             <p>J. Janoušek</p>
                             <p>
                                 <span class="left ">PORRV203</span>
@@ -141,7 +156,8 @@
                     <td></td>
                     <td id="wed5" class="lecture " colspan="2 ">
                         <p>
-                            <span class="abbrev ">AT.NET</span>
+                            <span class="abbrev ">AT.NET<img class="right space"
+                                src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('netLecture')"/></span>
                             <p>J. Janoušek</p>
                             <p>
                                 <span class="left ">POREC3</span>
@@ -151,7 +167,7 @@
                     </td>
                     <td id="wed6 " class="seminar " colspan="2 ">
                         <p>
-                            <span class="abbrev ">VIS</span> <strong>Sudý</strong>
+                            <span class="abbrev ">VIS</span> <strong>Sudý</strong><img class="right space" src="https://img.icons8.com/metro/15/000000/note.png" onclick="noteClicked('visSeminar')" />
                             <p>&nbsp;</p>
                             <p>
                                 <span class="left ">&nbsp;</span>
@@ -174,10 +190,6 @@
                 </tr>
             </tbody>
         </table>
-        <div id="timeIndicator" class="markerPosition">
-            <div class="myMarker "></div>
-            <div class="myMarkerDot "></div>
-        </div>
         <script src="script.js "></script>
     </body>
 
